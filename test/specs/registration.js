@@ -3,8 +3,8 @@ const BetMainPage = require('../Com.Bet/bet.main.page');
 const timestamp = require('time-stamp')
 const assert = require('assert');
 
-describe('My Login application', () => {
-    it('should login with valid credentials', async () => {
+describe('Bet', () => {
+    it('Registration for email', async () => {
 
 
         const email = await timestamp.utc('DDHHmm')+"@test.net";
@@ -25,8 +25,9 @@ describe('My Login application', () => {
         const but = await $("#popup_reg_email_buttonRegistration");
         await but.click();
 
-        const casa = await $("#close_popup_wait");
-        await casa.click();
+        // const casa = await $("#close_popup_wait");
+        // await casa.click();
+        await BetMainPage.CloseCashboxButton.click;
 
         await (await BetMainPage.profile).click();
 
