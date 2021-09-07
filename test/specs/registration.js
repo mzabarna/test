@@ -13,8 +13,8 @@ describe('Bet', () => {
 
         await BetMainPage.open();
 
-        const reg = await $("#open_registration");
-        await reg.click();
+        const DialogWindEmail = await $("#open_registration");
+        await DialogWindEmail.click();
 
         const regemail = await $("#reg_email");
         await regemail.setValue(email);

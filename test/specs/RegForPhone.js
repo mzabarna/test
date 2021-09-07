@@ -1,21 +1,26 @@
-
-const BetMainPage = require('../Com.Bet/bet.main.page');
-
 const assert = require('assert');
+const BetMainPage = require('../Com.Bet/bet.main.page');
+const ProfilePage = require('../pageobjects/ProfilePage');
+//const Page = new phone_mask();
+
+
 
 describe('Bet', () => {
     it('Registration for Phone', async () => {
 
 
-        const phoneForReg  = await (+79901234362 - 1);
-        await console.log(phoneForReg)
-        // await assert.deepStrictEqual(await phoneForReg,+79901234367,'test fished');
+        let phoneForReg  = (+79901234347);
+        console.log(phoneForReg);
+        // await console.log(phoneForReg);
+
+
+            // await assert.deepStrictEqual(await phoneForReg,+79901234367,'test fished');
         // await console.log(+79901234369 - 1)
 
         await BetMainPage.open();
 
-        const RegPopup = await $("#open_registration");
-        await RegPopup.click();
+        const DialogWindPhone = await $("#open_registration");
+        await DialogWindPhone.click();
 
         const PhoneRegButton = await $("#popup_reg_typePhone");
         await PhoneRegButton.click();
@@ -36,11 +41,10 @@ describe('Bet', () => {
 
         await (await BetMainPage.profile).click();
 
-        await console.log('BetMainPage.linePhone----------------------------------------------------------------------');
-        await console.log(await BetMainPage.linePhone);
-        await console.log('phoneForReg--------------------------------------------------------------------------------');
-        await console.log(phoneForReg);
-        await assert.deepStrictEqual(await (await BetMainPage.linePhone).getValue(),phoneForReg,'test fished');
+        // await assert.deepStrictEqual(await (await BetMainPage.linePhone).getValue(), ProfilePage.phone_mask,"test fish")
+       await assert.deepStrictEqual(await (await BetMainPage.linePhone).getValue(),await ProfilePage.phone_mask(phoneForReg));
+        // await assert.deepStrictEqual( "1111111","11111",'test fished');
+
         ///const lineLog = await $('#item-profile_email');///
         ///await assert.deepStrictEqual(await lineLog.getValue(),email,'test fished');
     });

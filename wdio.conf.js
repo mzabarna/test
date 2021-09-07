@@ -28,11 +28,12 @@ exports.config = {
     ],
     // Patterns to exclude.
     exclude: [
-        // 'path/to/excluded/files',
+        'path/to/excluded/files',
         './test/specs/login.dev.nl.sport.test.js',
-        // './test/specs/registration.js',
-        // './test/specs/RegForPhone.js',
-        // './test/specs/example.e2e.js',
+         './test/specs/registration.js',
+        './test/specs/RegForPhone.js',
+        //'./test/specs/Testask.js'
+
 
     ],
     //

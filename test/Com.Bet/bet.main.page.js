@@ -11,7 +11,7 @@ class BetMainPage {
     open () {
         browser.maximizeWindow()
 
-        browser.url("https://bet5.pin-up.tech/")
+        browser.url("https://bet5.pin-up.dev/")
 
     }
             //return browser.url(`https://the-internet.herokuapp.com/${path}`)

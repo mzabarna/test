@@ -8,15 +8,15 @@ describe('My Login application', () => {
         // await browser.url('https://testbet.pin-up.tech/ru-ru/');
         // await browser.url('https://bet5.pin-up.tech/');
         await BetMainPage.open();
-        const login = await $("#header_auth_login");//TODO:ШО ТАКОЕ ЛОГИН?
-        await login.setValue('marinaz@test.net')
+        const InputEmailLine = await $("#header_auth_login");//TODO:ШО ТАКОЕ ЛОГИН?
+        await InputEmailLine.setValue('marinaz@test.net')
 
-        const password = await $("#header_auth_password");//TODO: ШО ТАКОЕ ПАСВОРД?
-        await password.setValue('qwertyu741');
+        const InputPassLine = await $("#header_auth_password");//TODO: ШО ТАКОЕ ПАСВОРД?
+        await InputPassLine.setValue('qwertyu741');
 
 
-        const logBut = await $("#login");//TODO:
-        await logBut.click();
+        const ButtLogin = await $("#login");//TODO:
+        await ButtLogin.click();
 
 
         await (await BetMainPage.profile).click();
